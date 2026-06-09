@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Synapse Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>⚡ Synapse Grid</h1>
+
+        <p>
+            Monitor Inteligente da Rede Elétrica
+        </p>
+
+        <div class="card">
+
+            <h2>Registrar Sensor</h2>
+
+            <input
+                type="text"
+                id="sensor"
+                placeholder="ID do Sensor">
+
+            <input
+                type="number"
+                id="consumo"
+                placeholder="Consumo (%)">
+
+            <input
+                type="number"
+                id="tensao"
+                placeholder="Tensão (V)">
+
+            <button onclick="registrarLeitura()">
+                Registrar Leitura
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Fila de Leituras</h2>
+
+            <ul id="fila"></ul>
+
+            <button onclick="processarLeitura()">
+                Processar Próxima Leitura
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Alertas Detectados</h2>
+
+            <ul id="alertas"></ul>
+            <button onclick="limparalertas()">limpar alertas</button>
+        </div>
+
+        <div class="card">
+
+            <h2>Estatísticas</h2>
+
+            <p>Leituras Pendentes:
+                <span id="pendentes">0</span>
+            </p>
+
+            <p>Alertas Gerados:
+                <span id="totalAlertas">0</span>
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
